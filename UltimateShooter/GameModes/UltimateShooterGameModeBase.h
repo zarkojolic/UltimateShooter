@@ -1,0 +1,28 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/GameModeBase.h"
+#include "UltimateShooterGameModeBase.generated.h"
+
+/**
+ * 
+ */
+UCLASS()
+class ULTIMATESHOOTER_API AUltimateShooterGameModeBase : public AGameModeBase
+{
+	GENERATED_BODY()
+
+public:
+
+	/**
+	 * @brief Called when any character dies during the game.
+	 * 
+	 * Polymorpthic function that will be implemented in child classes
+	 * 
+	 * @param Character The character that has been killed.
+	 */
+	virtual void CharacterKilled(ACharacter* Character);
+	
+};
